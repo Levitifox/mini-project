@@ -478,3 +478,62 @@ footer {
     flex-basis: 0;
     flex-grow: 1;
 }
+
+.btn1,
+.btn2 {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 17px;
+    border: 1px solid #0000001a;
+    border-radius: 10px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.btn1:hover,
+.btn2:hover {
+    transform: scale(1.05);
+}
+
+nav a {
+    position: relative;
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #ff0040;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section-text {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
