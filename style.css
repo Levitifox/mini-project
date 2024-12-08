@@ -87,6 +87,7 @@ h2 {
         0px 1px 1px -0.5px rgba(42, 51, 69, 4%);
     border-radius: 10px;
     border: 1px solid #0000001a;
+    font-weight: 300;
 }
 
 body {
@@ -119,7 +120,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 15px;
 }
 
@@ -155,7 +156,7 @@ nav a {
         left: 0;
         bottom: -2px;
         width: 0;
-        height: 2px;
+        height: 1px;
         background-color: #000000;
         transition: width 0.3s ease;
     }
@@ -272,6 +273,7 @@ nav a {
     flex-basis: 0;
     flex-grow: 1;
     font-weight: 300;
+    margin-top: 0.8em;
 
     p + h2 {
         margin-top: 1.2em;
@@ -334,19 +336,20 @@ nav a {
     gap: 20px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 
     &::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
     }
 
     &::-webkit-scrollbar-track {
-        background: #fcfbfc;
+        background: #0000001a;
+        border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
-        --color: #ff0040;
+        --color: #9b9b9b;
         background-color: var(--color);
         border-radius: 10px;
 
@@ -359,7 +362,7 @@ nav a {
 .slider-section-item {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 275px;
     align-items: center;
     flex-shrink: 0;
     scroll-snap-align: start;
@@ -374,13 +377,23 @@ nav a {
 
     a {
         margin-top: 1.2em;
-        text-decoration: underline;
-        color: #000000;
+        text-decoration: none;
+        color: #ffffff;
+        --color: #ff0040;
+        background-color: var(--color);
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 1px solid #0000001a;
+        font-weight: 300;
+
+        &:hover {
+            background-color: color-mix(in hsl, var(--color), black 10%);
+        }
     }
 }
 
 .advantages-section {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .advantages-section-contents {
@@ -415,6 +428,7 @@ nav a {
 .advantages-section-text {
     flex-basis: 0;
     flex-grow: 2;
+    font-weight: 300;
 
     hr {
         margin: 25px -20px 20px -40px;
@@ -426,7 +440,7 @@ nav a {
 footer {
     background-color: #0b0101;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 60px;
 
     li {
