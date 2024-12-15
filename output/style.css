@@ -516,6 +516,129 @@ nav a {
     }
 }
 
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.product-slider-container {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-slider {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        min-height: 0;
+        min-width: 0;
+        display: block;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (width <= 1000px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-slider {
+        flex-basis: auto;
+    }
+}
+
+.product-slides {
+    display: flex;
+    transition: margin-left 0.3s ease;
+
+    &:has(.product-slide:last-child:nth-child(5)) {
+        width: 500%;
+    }
+}
+
+.product-slide {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.bar {
+    width: 20px;
+    height: 8px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff0040;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+input[name="slider"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#slide1:checked ~ .product-slides {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .product-slides {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .product-slides {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ .product-slides {
+    margin-left: -300%;
+}
+
+#slide5:checked ~ .product-slides {
+    margin-left: -400%;
+}
+
+.product-description {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    .btn1 {
+        margin-top: 20px;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0px 10px 0;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    border: 1px solid #0000001a;
+    color: #000000;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
 footer {
     background-color: #0b0101;
     color: #ffffff;
