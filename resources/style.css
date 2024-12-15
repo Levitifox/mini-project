@@ -639,6 +639,71 @@ input[name="slider"] {
     font-size: 0.9em;
 }
 
+.author-info {
+    border-radius: 10px;
+    border: 1px solid #0000001a;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    flex-grow: 2;
+    flex-basis: 0;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff0040;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    border-bottom: 1px solid #0000001a;
+}
+
+.latest {
+    border: none;
+}
+
+.author {
+    display: flex;
+    gap: 40px;
+
+    img {
+        object-fit: cover;
+        display: block;
+        min-width: 0;
+        flex-grow: 1;
+        flex-basis: 0;
+        border-radius: 10px;
+    }
+}
+
+@media (width <= 900px) {
+    .author img {
+        display: none;
+    }
+}
+
 footer {
     background-color: #0b0101;
     color: #ffffff;
